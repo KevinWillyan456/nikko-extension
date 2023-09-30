@@ -17,10 +17,12 @@ let data = [
     "https://nikko-extension.kevinsouza456.repl.co/assets/resources/video/Voc%C3%AA%20J%C3%81%20OUVIU%20essa%20m%C3%BAsica_Better%20Off%20Alone.mp4",
 ];
 
+let ultimoSorteado = -1;
+
 buttonAcept.addEventListener("click", () => {
     telaBemVindo.remove();
-    let iniVideo = Math.floor(Math.random() * (data.length - 0) + 0);
-    videoFundo.src = data[iniVideo];
+    ultimoSorteado = sortearDiferenteAnterior(data, ultimoSorteado);
+    videoFundo.src = data[ultimoSorteado];
     telaLoading.classList.remove("tela_loading-Hidden");
 });
 
@@ -35,11 +37,20 @@ videoFundo.addEventListener("loadeddata", () => {
 function gerenciaVideos() {
     videoFundo.addEventListener("ended", nextVideo);
     function nextVideo() {
-        let num = Math.floor(Math.random() * (data.length - 0) + 0);
-        videoFundo.src = data[num];
+        ultimoSorteado = sortearDiferenteAnterior(data, ultimoSorteado);
+        videoFundo.src = data[ultimoSorteado];
         videoFundo.play();
         gerenciaVideos();
     }
+}
+
+function sortearDiferenteAnterior(array, ultimoSorteado) {
+    let novoSorteado;
+    do {
+        novoSorteado = Math.floor(Math.random() * array.length);
+    } while (novoSorteado === ultimoSorteado);
+
+    return novoSorteado;
 }
 
 let buttonFullScreen = document.querySelector(".fullScreen");
