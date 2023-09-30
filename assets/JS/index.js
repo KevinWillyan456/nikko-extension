@@ -3,6 +3,7 @@ const telaBemVindo = document.querySelector(".tela_bem_vindo");
 const body = document.querySelector("body");
 let videoFundo = document.getElementById("backgroundVideo");
 let telaLoading = document.querySelector(".tela_loading");
+const btnProximo = document.querySelector("#btnProximo");
 
 let data = [
     "https://nikko-extension.kevinsouza456.repl.co/assets/resources/video/Essa%20m%C3%BAsica%20DEVERIA%20dominar%20o%20mundo%20Nikko%20Edit.mp4",
@@ -19,6 +20,10 @@ let data = [
 
 let ultimoSorteado = -1;
 
+btnProximo.addEventListener("click", () => {
+    nextVideo();
+});
+
 buttonAcept.addEventListener("click", () => {
     telaBemVindo.remove();
     ultimoSorteado = sortearDiferenteAnterior(data, ultimoSorteado);
@@ -31,17 +36,20 @@ videoFundo.addEventListener("loadeddata", () => {
         telaLoading.classList.add("tela_loading-Hidden");
         videoFundo.play();
         gerenciaVideos();
+        document
+            .querySelector(".container-proximo")
+            .classList.remove("tela_loading-Hidden");
     }, 2000);
 });
 
+function nextVideo() {
+    ultimoSorteado = sortearDiferenteAnterior(data, ultimoSorteado);
+    videoFundo.src = data[ultimoSorteado];
+    videoFundo.play();
+    gerenciaVideos();
+}
 function gerenciaVideos() {
     videoFundo.addEventListener("ended", nextVideo);
-    function nextVideo() {
-        ultimoSorteado = sortearDiferenteAnterior(data, ultimoSorteado);
-        videoFundo.src = data[ultimoSorteado];
-        videoFundo.play();
-        gerenciaVideos();
-    }
 }
 
 function sortearDiferenteAnterior(array, ultimoSorteado) {
