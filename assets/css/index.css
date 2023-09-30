@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+
+}
+.tela_bem_vindo {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(0deg, #291633, #000000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tela_bem_vindo .conteiner {
+    position: relative;
+    width: 600px;
+    height: 800px;
+    border: 3px solid white;
+    background-color: black;
+}
+.tela_bem_vindo .conteiner div {
+    position: absolute;
+    color: #D5B7E4;
+    font-size: 30px;
+    width: 400px;
+    height: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+    top: 240px;
+    left: 100px;
+}
+.tela_bem_vindo .conteiner button {
+    position: absolute;
+    background-color: #383838;
+    color: #D5B7E4;
+    width: 300px;
+    height: 100px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+
+    top: 660px;
+    left: 150px;
+}
+
+
+.tela_loading {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(90deg, #271987, #1D101B);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tela_loading-Hidden {
+  display: none;
+}
+.img_loading {
+  width: 200px;
+}
+.text_loading {
+  animation: text_loading_anime 800ms infinite alternate;
+  color: white;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  transform: translateY(30px);
+}
+@keyframes text_loading_anime {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.player-video-bg {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  z-index: -1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.player-video-bg video {
+  width: 100%;
+}
+.fullScreen {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 30vh;
+  background-color: transparent;
+  z-index: 1000;
+}
+
+@media (max-width: 700px){
+  .tela_bem_vindo .conteiner {
+    position: relative;
+    width: 300px;
+    height: 600px;
+    border: 3px solid white;
+    background-color: black;
+}
+.tela_bem_vindo .conteiner div {
+    position: absolute;
+    color: #D5B7E4;
+    font-size: 30px;
+    width: 280px;
+    height: 270px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    top: 100px;
+    left: 10px;
+}
+.tela_bem_vindo .conteiner button {
+    position: absolute;
+    background-color: #383838;
+    color: #D5B7E4;
+    width: 250px;
+    height: 100px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+
+    top: 475px;
+    left: 25px;
+  }
+}
+
+/* Mobile Adjusts */
+@media(max-width: 1000px){
+  .player-video-bg video {
+    width: 80%;
+  }
+}
