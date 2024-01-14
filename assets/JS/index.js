@@ -6,16 +6,16 @@ let telaLoading = document.querySelector(".tela_loading");
 const btnProximo = document.querySelector("#btnProximo");
 
 let data = [
-    "https://nikko-extension.kevinsouza456.repl.co/assets/resources/video/Essa%20m%C3%BAsica%20DEVERIA%20dominar%20o%20mundo%20Nikko%20Edit.mp4",
-    "https://nikko-extension.kevinsouza456.repl.co/assets/resources/video/FOGO%20TERRA%20E%20AR.mp4",
-    "https://nikko-extension.kevinsouza456.repl.co/assets/resources/video/Mano,%20pq%20eu%20viciei%20TANTO%20nessa%20musica%20Nikko%20Edit.mp4",
-    "https://nikko-extension.kevinsouza456.repl.co/assets/resources/video/Minist%C3%A9rio%20da%20SAUDE%20Adverte_%20Essa%20m%C3%BAsica%20causa%20v%C3%ADcios.mp4",
-    "https://nikko-extension.kevinsouza456.repl.co/assets/resources/video/NAVE%20ESPACIAL%20-%20Nightcore.mp4",
-    "https://nikko-extension.kevinsouza456.repl.co/assets/resources/video/Nightcore%20Brasileiro%20E%20BOM.mp4",
-    "https://nikko-extension.kevinsouza456.repl.co/assets/resources/video/S3RL%20-%20Princesa%20Jujuba%20VS%20Princesa%20de%20Fogo%20Tradu%C3%A7%C3%A3o_Legendado.mp4",
-    "https://nikko-extension.kevinsouza456.repl.co/assets/resources/video/TODO%20MUNDO%20ao%20seu%20redor%20ja%20ouviu%20esse%20remix.mp4",
-    "https://nikko-extension.kevinsouza456.repl.co/assets/resources/video/TOKYO%20DE%20NOITE_Tokyo%20By%20Night.mp4",
-    "https://nikko-extension.kevinsouza456.repl.co/assets/resources/video/Voc%C3%AA%20J%C3%81%20OUVIU%20essa%20m%C3%BAsica_Better%20Off%20Alone.mp4",
+    "GvHiffqm5ic",
+    "_EGPF4lOhS0",
+    "3crVz-PScY0",
+    "z4iKx2EB6yI",
+    "X1p_nufU6Jk",
+    "z_V5qk91x84",
+    "Y1l3ePucj1c",
+    "tbGLhR8-h3k",
+    "8mEy0RjAURQ",
+    "mqr_HZoigf8",
 ];
 
 let ultimoSorteado = -1;
